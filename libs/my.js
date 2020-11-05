@@ -5,6 +5,6 @@ Bot.sendMessage(text)
 }
 
 publish({
-botSeller:main()  
+botSeller:main  
 
 })
