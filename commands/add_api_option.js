@@ -30,7 +30,7 @@ if (!access[0] || !access[1] || !access[2]||!access[3]) {
   return
 }
 
-Libs.Coinbase.setup()
+Libs.SellerCoinbase.setup()
 
 var id = ""
 if(access[3].slice(1,35)=="https://www.coinbase.com/accounts/"){
