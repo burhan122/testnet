@@ -2,7 +2,7 @@ function main(callBack) {
   callBack({
     method: "GET",
     path: "notifications",
-    onSuccess: "?onComplateCoinbaseDP",
+    onSuccess: "onSuccesResult",
     onError: "onApiError"
   })
 }
