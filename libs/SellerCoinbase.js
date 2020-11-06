@@ -270,7 +270,7 @@ function getError(code) {
   var err_msg = ""
   var err
   for (var ind in errors) {
-    err = errors[ind]
+   var err = errors[ind]
     if (err.code == code) {
       err_msg += err.id + ": " + err.description + "; "
     }
@@ -298,9 +298,9 @@ function onApiCall() {
   var onError = getCommandFromParam(cmds[1])
 
   if (!http_status) {
-    http_status = 0
+    var http_status = 0
   }
-  http_status = parseInt(http_status)
+ var http_status = parseInt(http_status)
 
   if (http_status > 299 || http_status < 200) {
     var error = libPrefix + " Api error. " + getError(http_status)
@@ -316,10 +316,10 @@ function onApiCall() {
 
 function onApiCallError(onError, error) {
   if (!onError) {
-    onError = params
+   var onError = params
   }
   var opts = getResultOptions()
-  opts.error = error
+ var opts.error = error
   Bot.run({ command: onError, options: opts })
 }
 
