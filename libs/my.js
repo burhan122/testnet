@@ -1,5 +1,7 @@
 
 
+var main = "hi"
+
 function getRes(resName){
   let res = Libs.ResourcesLib.userRes(resName); 
   return res    
