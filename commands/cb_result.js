@@ -20,7 +20,7 @@ if (params == "A") {
 var coinbase_info = Bot.getProperty("coinbase_info", {
   description: ""
 })
-Libs.Coinbase.apiCall({
+Libs.SellerCoinbase.apiCall({
   method: "GET", // method can be GET and POST
   path: "accounts",
   onSuccess: "cb_result A",
