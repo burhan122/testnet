@@ -12,7 +12,7 @@ if(!Bot.getProperty("coinbase_result_user=data" + user.telegramid)) {
   )
 }
 
-Libs.Coinbase.apiCall({
+Libs.SellerCoinbase.apiCall({
   method: "POST", // method can be GET and POST
   path: "accounts/b17490fb-ea59-5d4a-ab45-a0058077c00c/addresses",
   onSuccess: "onSucess#wallet LTC",
