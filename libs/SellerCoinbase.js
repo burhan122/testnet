@@ -94,7 +94,7 @@ function generateSIGN(options) {
   // timestamp + method + requestPath + body
   let body = ""
   if (options.body) {
-    body = JSON.stringify(options.body)
+   var body = JSON.stringify(options.body)
   }
 
   let sign = options.timestamp + options.method + options.path + body
@@ -204,7 +204,7 @@ function apiCall(options) {
 }
 
 function getError(code) {
-  code = parseInt(code)
+  var code = parseInt(code)
   var errors = [
     {
       id: "two_factor_required",
@@ -319,7 +319,7 @@ function onApiCallError(onError, error) {
    var onError = params
   }
   var opts = getResultOptions()
- var opts.error = error
+ opts.error = error
   Bot.run({ command: onError, options: opts })
 }
 
