@@ -94,7 +94,7 @@ function generateSIGN(options) {
   // timestamp + method + requestPath + body
   let body = ""
   if (options.body) {
-   var body = JSON.stringify(options.body)
+   body +=JSON.stringify(options.body)
   }
 
   let sign = options.timestamp + options.method + options.path + body
