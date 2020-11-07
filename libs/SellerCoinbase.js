@@ -274,7 +274,8 @@ publish({
   setup: setup,
   apiCall: apiCall,
   timeStamp:timestamp,
-  api:getOptions
+  api:getOptions,
+  sing:generateSIGN
   
 })
 
