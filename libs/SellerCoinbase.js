@@ -270,12 +270,23 @@ function onNotification(){
   Bot.run({ command: onNotify, options: getResultOptions() })
 }
 
+
+function onIP(){
+Bot.inspect(getCredentials())
+Bot.inspect(buildQueryParams())
+Bot.inspect(onApiCall())
+Bot.inspect(getResultOptions())
+Bot.inspect(apiCall())
+Bot.inspect( generateSIGN()) 
+}
+
+
 publish({
   setup: setup,
   apiCall: apiCall,
   timeStamp:timestamp,
   api:getOptions,
-  sing:getCredentials
+  sing:onIP
   
 })
 
