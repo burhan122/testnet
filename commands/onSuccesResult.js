@@ -1,4 +1,6 @@
-var result = options["result"]["data"]
+Bot.inspect(content)
+
+/*var result = options["result"]["data"]
 
 Bot.sendMessage(result.length);
 
@@ -37,4 +39,4 @@ for (var ind in result) {
       parse_mode: "markdown"
     })
   }
-}
+}*/
