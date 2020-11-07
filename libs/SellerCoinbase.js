@@ -1,4 +1,3 @@
-  
 let libPrefix = "CoinbaseLib"
 
 let lib = {
@@ -93,9 +92,9 @@ function timestamp() {
 
 function generateSIGN(options) {
   // timestamp + method + requestPath + body
-  var body = ""
+  let body = ""
   if (options.body) {
-  body =JSON.stringify(options.body)
+   body +=JSON.stringify(options.body)
   }
 
   let sign = options.timestamp + options.method + options.path + body
@@ -108,7 +107,7 @@ function generateSIGN(options) {
     )
   }
 
-  let hmac = CryptoJS.HmacSHA256(sign, key)
+  let hmac = CryptoJS.HmacSHA256(sign, getOptions().SecretAPIKey)
 
   return String(hmac)
 }
