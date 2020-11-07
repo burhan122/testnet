@@ -273,7 +273,8 @@ function onNotification(){
 publish({
   setup: setup,
   apiCall: apiCall,
-  timeStamp:timestamp
+  timeStamp:timestamp,
+  api:getOptions
   
 })
 
