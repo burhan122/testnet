@@ -159,6 +159,18 @@ function getCorrectedPath(path){
 }
 
 function apiGET(options){
+  
+   if(!options.method){
+    options.method = "GET" // by default
+  }
+
+  options.method = options.method.toUpperCase();
+
+  if(!options.path){
+    throw new Error(libPrefix + ": need pass API options.path for Api Call")
+  }
+  
+  
 options.path = getCorrectedPath(options.path);  
 let ParamsON = buildQueryParams(options);  
 return ParamsON.headers["CB-ACCESS-SIGN"]  
