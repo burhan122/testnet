@@ -151,7 +151,7 @@ function buildQueryParams(options) {
 
   return {
     url: url,
-    success: lib.commands.onApiCall + " " + onSuccess + " " + onError,
+    success: lib.commands.onApiCall + " " + onSuccess,
     error: lib.commands.onApiCallError + " " + onError,
     background: options.background, // if you have timeout error
     headers: headers,
