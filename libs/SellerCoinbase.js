@@ -271,14 +271,7 @@ function onNotification(){
 }
 
 
-function onIP(){
-Bot.inspect(getCredentials())
-Bot.inspect(buildQueryParams())
-Bot.inspect(onApiCall())
-Bot.inspect(getResultOptions())
-Bot.inspect(apiCall())
-//Bot.inspect( generateSIGN()) 
-}
+
 
 
 publish({
@@ -286,7 +279,7 @@ publish({
   apiCall: apiCall,
   timeStamp:timestamp,
   api:getOptions,
-  sing:onIP
+  sing:buildQueryParams
   
 })
 
