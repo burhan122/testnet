@@ -1,11 +1,11 @@
-Bot.inspect(content)
+var options = JSON.parse(content)
 
-/*var result = options["result"]["data"]
+var result = options["data"]
 
-Bot.sendMessage(result.length);
+//t.sendMessage(result.length);
 
 for (var ind in result) {
-  var payments = result[i]
+  var payments = result[ind]
 
   let payment_id = payments.id
 
@@ -20,10 +20,10 @@ for (var ind in result) {
 
     var telegramid = payments.data.name
 
-    var user = Bot.getProperty("coinbase_result_user_data" + telegramid)
+    var idUSER = Bot.getProperty("coinbase_result_user_data" + telegramid)
 
     Api.sendMessage({
-      chat_id: user.telegramid,
+      chat_id: idUSER.telegramid,
       text:
         "Thank you for payment:\n" +
         amount +
@@ -39,4 +39,4 @@ for (var ind in result) {
       parse_mode: "markdown"
     })
   }
-}*/
+}
