@@ -275,7 +275,7 @@ publish({
   apiCall: apiCall,
   timeStamp:timestamp,
   api:getOptions,
-  sing:generateSIGN
+  sing:getCredentials
   
 })
 
