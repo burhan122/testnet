@@ -182,12 +182,11 @@ function apiCall(options){
 
   
   
-  
   let reqParams = buildQueryParams(options);
 
   
-  Bot.inspect(reqParams)
-  
+ 
+
   
   if(options.method == "GET"){
     return HTTP.get(reqParams)
@@ -273,7 +272,9 @@ function onNotification(){
 
 publish({
   setup: setup,
-  apiCall: apiCall
+  apiCall: apiCall,
+  test:getCredentials
+  
 })
 
 
