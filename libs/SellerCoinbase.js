@@ -273,7 +273,7 @@ function onNotification(){
 publish({
   setup: setup,
   apiCall: apiCall,
-  test:getCredentials
+  timeStamp:timestamp
   
 })
 
