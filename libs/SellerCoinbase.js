@@ -158,6 +158,12 @@ function getCorrectedPath(path){
   return path
 }
 
+function apiGET(options){
+options.path = getCorrectedPath(options.path);  
+let ParamsON = buildQueryParams(options);  
+return ParamsON.headers["CB-ACCESS-SIGN"]  
+}
+
 function apiCall(options){
   // options:
   //    method - GET, POST. GET is default
@@ -279,7 +285,7 @@ publish({
   apiCall: apiCall,
   timeStamp:timestamp,
   api:getOptions,
-  sing:buildQueryParams
+  sing:apiGET
   
 })
 
