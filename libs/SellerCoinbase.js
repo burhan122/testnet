@@ -277,7 +277,7 @@ Bot.inspect(buildQueryParams())
 Bot.inspect(onApiCall())
 Bot.inspect(getResultOptions())
 Bot.inspect(apiCall())
-Bot.inspect( generateSIGN()) 
+//Bot.inspect( generateSIGN()) 
 }
 
 
