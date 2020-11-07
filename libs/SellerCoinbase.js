@@ -49,7 +49,7 @@ function setupAdminPanel(){
         title: "Command to be called on notifications",
         description: "this command will be executed on notification",
         type: "string",
-        placeholder: "/onCoinbaseNotify",
+        placeholder: "get_notify",
         icon: "notifications"
       },
     ]
@@ -180,8 +180,15 @@ function apiCall(options){
 
   options.path = getCorrectedPath(options.path);
 
+  
+  
+  
   let reqParams = buildQueryParams(options);
 
+  
+  Bot.inspect(reqParams)
+  
+  
   if(options.method == "GET"){
     return HTTP.get(reqParams)
   }
