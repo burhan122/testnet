@@ -1,5 +1,5 @@
 {
   "bb_sync_version":"1.0",
-  "name":"CreateChateBot",
+  "name":bot.name,
   "csv_url":null
 }
