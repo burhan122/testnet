@@ -8,7 +8,7 @@ if (!one_time_data) {
   json_top_data.push(text)
   Bot.setProperty("json_top_data", json_top_data, "json")
 }
-
+}
 
   
 function doSort(a, b){
