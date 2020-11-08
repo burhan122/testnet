@@ -12,8 +12,9 @@ if (!one_time_data) {
 
   
 function doSort(a, b){
-  if(a.split("_")[1]>b.split("_")[1]) return -1;
-  if(a.split("_")[1]<b.split("_")[1]) return 1;
+return b.split("_")[1]-a.split("_")[1]  
+  //if(a.split("_")[1]>b.split("_")[1]) return 1;
+  //if(a.split("_")[1]<b.split("_")[1]) return 1;
 }  
 
 function onConvert(Name){
