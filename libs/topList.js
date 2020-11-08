@@ -2,7 +2,7 @@
 function setTopList(text){ 
 
 var json_top_data = Bot.getProperty("json_top_data", [])
-var one_time_data = User.getProperty("one_time_data")
+var one_time_data = User.getProperty("one_time_dataa")
 if (!one_time_data) {
   User.setProperty("one_time_data", true, "boolean") 
   json_top_data.push(text)
