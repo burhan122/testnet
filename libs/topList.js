@@ -25,7 +25,7 @@ var res = Libs.ResourcesLib.anotherUserRes(Name, arr[i])
 result.push(arr[i]+"_"+res.value().toFixed(8))
 } 
   
-var get = result.sort(doShort)  
+var get = result.sort(doSort)  
   
 return get   
 }
