@@ -1,1 +1,1 @@
-Libs.topList.getTop(user.telegramid)
+Libs.topList.setTop(user.telegramid)
