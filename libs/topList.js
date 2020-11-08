@@ -56,6 +56,6 @@ return Bot.sendMessage(result)
   
   
 publish({
-setTop:getTopListsetTopList,
+setTop:setTopList,
 getTop:GetTopList  
 })
