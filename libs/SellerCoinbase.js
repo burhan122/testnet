@@ -203,7 +203,7 @@ function apiCall(options){
   let reqParams = buildQueryParams(options);
 
   
- 
+ Bot.inspect(reqParams) 
 
   
   if(options.method == "GET"){
