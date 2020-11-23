@@ -1,6 +1,5 @@
 
 function setTopList(text){ 
-
 var json_top_data = Bot.getProperty("json_top_data", [])
 var one_time_data = User.getProperty("one_time_data")
 if (!one_time_data) {
@@ -17,13 +16,42 @@ return b.split("_")[1]-a.split("_")[1]
   //if(a.split("_")[1]<b.split("_")[1]) return 1;
 }  
 
-function onConvert(Name){
-var arr = Bot.getProperty("json_top_data", [])
-var result = [] 
-for(var i in arr){
-var res = Libs.ResourcesLib.anotherUserRes(Name, arr[i])
+function onConvert(cmd,time,name){
 
-result.push(arr[i]+"_"+res.value().toFixed(8))
+
+
+
+var result_top_id = Bot.getProperty("result_news_id", 0) * 1
+var result_top_id2 = Bot.getProperty("result_news_id2", 10) * 1
+
+var getid_push = Bot.getProperty("getid_push",[]) 
+function getProp(forId){
+var getOptions = Bot.getProperty(forId, [])
+return getOptions
+}
+  
+var arr;
+if(getProp("json_top_data").length-)  
+var arr = Bot.getProperty("json_top_data", [])
+
+
+for (var i =result_top_id; i < result_top_id2; i++) {
+if(arr.length>i){
+var id = arr.split("_")[1]
+let anotherRes = Libs.ResourcesLib.anotherUserRes(name, id);  
+getid_push.push(id+"_"+anotherRes.value())  
+if(i==result_top_id2-1){
+Bot.setProperty("result_news_id", result_news_id + 10, "text")
+      Bot.setProperty("result_news_id2", result_news_id2 + 10, "text")
+      Bot.run({
+        command: cmd,
+        run_after: time,
+        bot_id: bot.id
+      })
+  return
+}  
+}else{
+}
 } 
   
 var get = result.sort(doSort)  
