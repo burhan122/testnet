@@ -1,13 +1,13 @@
 
-function setupHistry(name, value, total) {
-  function list(options) {
+function list(options) {
     var result = Bot.getProperty(options, [])
     return result
   }
+var coin = Bot.getProperty("coin","not set")
 
-  var result1 = list(name)
-
-  if (result1.length == total) {
+function setupHistry(name, value, total) {
+ var result1 = list(name)
+ if (result1.length == total) {
     delete result1[0]
     Bot.setProperty(
       name,
@@ -17,50 +17,57 @@ function setupHistry(name, value, total) {
       "json"
     )
   }
-
-  var result2 = list(name)
-
-  result2.push(value)
+var result2 = list(name)
+ result2.push(value)
   Bot.setProperty(name, result2, "json")
 }
 
-var setup = {
-  hist: setupHistry
-}
-
-var json = {
-  name: 100
-}
-
-setup.hist("list" + user.telegramid, json, 5)
 
 
 
+function getHist(name,error,text,nametext){
+  
+var msg = nametext
 
-function list(options) {
-  var result = Bot.getProperty(options, [])
-  return result
+function convert(get,item){
+var runItem = get.replace(/{([a-z_]+)}/gi, function(fullmatch, key) {
+  return item[key] ? item[key] : fullmatch
+})
+return runItem
 }
 
 
-var msg =
-  "*🗂 Transactions History*\n_Here you can find the last 15 transactions related to your account_\n\n"
-
-
-if (hist.length > 15) {
-  var max = hist.length * 1
-  var min = max - 15
-  var history = hist.slice(min, max)
-} else {
-var history = list("list" + user.telegramid)
-
+var history = list(name)
 if (history.length > 0) {
   for (var i in history) {
     var data = history[i]
 
-    msg += data.name+"\n"
+var itemOption ={
+txid:data.txid,
+txurl:data.txurl,
+amount:data.amount,
+coin:coin,
+mention:data.mention,
+bold:"*",
+italic:"_",
+mono:"`"
+}    
+    
+    
+var report =  convert(text,itemOption) 
+    
+    msg += report
   }
+}else{
+Bot.sendMessage(error, { disable_web_page_preview: true })
+return  
 }
 Bot.sendMessage(msg, { disable_web_page_preview: true })
+
+}
   
-  public
+  
+publish({
+setHist:setupHistry,
+getHist:getHist 
+})
