@@ -1,6 +1,6 @@
 
 
-var main = "hi"
+/*var main = "hi"
 
 function getRes(resName){
   let res = Libs.ResourcesLib.userRes(resName); 
@@ -820,4 +820,4 @@ function invest(){
     gitin:InvestHist,
     gitac:AccountHist,
     gitreturn:main        
-    })
+    })*/
