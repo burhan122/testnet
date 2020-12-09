@@ -1,5 +1,5 @@
 
-function list(options) {
+/*function list(options) {
     var result = Bot.getProperty(options, [])
     return result
   }
@@ -70,4 +70,4 @@ Bot.sendMessage(msg, { disable_web_page_preview: true })
 publish({
 setHist:setupHistry,
 getHist:getHist 
-})
+})*/
