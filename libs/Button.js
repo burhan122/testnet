@@ -1,4 +1,4 @@
-function GetButton(){
+/*function GetButton(){
 return Bot.getProperty("button", {
   balance: "💰 {balanceid} {cur}",
   deposit: "📥 Deposits",
@@ -90,4 +90,4 @@ publish({
  
   
 })
-
+*/
