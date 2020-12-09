@@ -1,4 +1,4 @@
-
+/*
 function setTopList(text){ 
 var json_top_data = Bot.getProperty("json_top_data", [])
 var one_time_data = User.getProperty("one_time_data")
@@ -87,4 +87,4 @@ return Bot.sendMessage(result)
 publish({
 setTop:setTopList,
 getTop:GetTopList  
-})
+})*/
